@@ -1,0 +1,13 @@
+.footer1st{
+  width: 100%;
+  background: linear-gradient(95deg, #000000, #2f5d3a);
+  color:#afbdb2;
+}
+
+h2{
+  font-family:times;
+}
+
+p{
+  text-align:center;
+}

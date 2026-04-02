@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;            
+  background: black;
+  z-index: 1000;
+}
+
+.firstblock{
+  position: relative;
+  min-height: 90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+
+  background-image: url("src/kan.jpg"); /* laptop image */
+  background-size: cover;
+  background-position: center;
+}
+
+/* dark overlay */
+.firstblock::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  
+}
+
+.firstblock .content{
+  position:relative;
+  z-index:2;
+  max-width:900px;
+  padding:20px;
+}
+
+@media (max-width:768px){
+
+  .firstblock{
+    background-image: url("src/mobile.jpg"); /* mobile image */
+    min-height:80vh;
+  }
+
+}
+
+
+.second-block {
+  padding: 60px 20px;
+}
+
+.thirdblock {
+  padding: 80px 20px;
+}
+
+.firstblock .btn{
+  position:absolute;
+  bottom:120px;
+  left:140px;
+  font-size: 40px;
+   transform: rotate(-7deg);
+     background: transparent;
+  
+  color: transparent;
+   text-shadow: none;
+}
+
+.firstblock .btn:hover{
+  background:transparent;
+   
+  color: transparent;
+}
+
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background: url("farmhouse.jpg") center/cover no-repeat;
+}
+
+/* Roof Text */
+
+
+
+.firstbuttons{
+  text-align: center;
+}
+
+.second-block{
+  width: 100%;
+  text-align: center;
+  padding: 30px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: bisque;
+}
+
+
+.h31{
+  font-size:25px;
+  font-weight:bolder;
+}
+
+@media (max-width:768px){
+  .h31{
+    font-size:35px  !important ;
+  }
+}
+
+@media (max-width:576px){
+  .h31{
+    font-size:25px  !important;
+  }
+}
+
+
+/* ================================= */
+/* 🔥 RESPONSIVE CODE ADDED BELOW   */
+/* ================================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+
+  .firstblock {
+    height: auto;
+    padding-bottom: 40px;
+  }
+
+  .hero {
+    height: 400px;
+  }
+
+  .roof-text {
+    font-size: 42px;
+    left: 30px;
+  }
+
+  .roof-text span {
+    font-size: 24px;
+  }
+
+  .second-block {
+    height: auto;
+  }
+
+  .secblock_1st {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .thirdblock {
+    height: auto;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 576px) {
+
+  .hero {
+    height: 300px;
+  }
+
+  .roof-text {
+    font-size: 28px;
+    left: 15px;
+    top: 15px;
+  }
+
+  .roof-text span {
+    font-size: 18px;
+  }
+
+  .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .second-block {
+    padding: 40px 15px;
+  }
+
+  .thirdblock {
+    padding: 40px 15px;
+  }
+
+}
