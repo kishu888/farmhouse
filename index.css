@@ -55,7 +55,7 @@ header {
 @media (max-width:768px){
 
   .firstblock{
-    background-image: url("src/mobile.jpg"); /* mobile image */
+    background-image: url("public/images/bg.png"); /* mobile image */
     min-height:80vh;
   }
 
