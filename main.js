@@ -1,11 +1,15 @@
-fetch("header.html")
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("header").innerHTML = data;
-  });
+// LOAD HEADER + FOOTER FIRST, THEN APPLY LANGUAGE
 
-fetch("footer.html")
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("footer").innerHTML = data;
-  });
+Promise.all([
+  fetch("header.html").then(res => res.text()),
+  fetch("footer.html").then(res => res.text())
+]).then(([headerData, footerData]) => {
+
+  document.getElementById("header").innerHTML = headerData;
+  document.getElementById("footer").innerHTML = footerData;
+
+  // APPLY LANGUAGE AFTER EVERYTHING LOADS
+  if (typeof applyLanguage === "function") {
+    applyLanguage();
+  }
+});

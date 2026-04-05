@@ -86,7 +86,8 @@ const translations = {
 
         bananaTitle: "Banana & Banana Plant",
         bananaDesc: "Fresh bananas grown on our farm. Healthy banana plants are also available for farming or gardens.",
-
+        
+        openmaps:"open in google maps  →",
     },
 
     kn: {
@@ -172,6 +173,8 @@ const translations = {
 
         bananaTitle: "ಬಾಳೆಹಣ್ಣು ಮತ್ತು ಬಾಳೆ ಗಿಡ",
         bananaDesc: "ನಮ್ಮ ಫಾರ್ಮ್‌ನಲ್ಲಿ ಬೆಳೆಯುವ ತಾಜಾ ಬಾಳೆಹಣ್ಣು ಮತ್ತು ಆರೋಗ್ಯಕರ ಬಾಳೆ ಗಿಡಗಳು ಲಭ್ಯ.",
+
+        openmaps:"ಗೂಗಲ್ ಮ್ಯಾಪ್ಸ್‌ನಲ್ಲಿ ತೆರೆಯಿರಿ →"
     }
 };
 
@@ -184,7 +187,7 @@ function applyLanguage() {
         const key = element.getAttribute("data-translate");
 
         if (translations[currentLang][key]) {
-            element.innerText = translations[currentLang][key];
+            element.innerHTML = translations[currentLang][key];
         }
 
     });
@@ -224,10 +227,7 @@ function toggleLanguage() {
 }
 
 
-// ✅ PROPER LOAD
-document.addEventListener("DOMContentLoaded", function () {
-    applyLanguage();
-});
+
 
 
 // ✅ IMAGE SWITCH
