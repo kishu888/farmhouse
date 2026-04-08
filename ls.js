@@ -242,17 +242,17 @@ function updateImage() {
     if (currentLang === "kn") {
 
         if (isMobile) {
-            hero.style.backgroundImage = "url('kanmobile.png')";
+            hero.style.backgroundImage = "url('kanmobile.webp')";
         } else {
-            hero.style.backgroundImage = "url('kan.jpg')";
+            hero.style.backgroundImage = "url('kan.webp')";
         }
 
     } else {
 
         if (isMobile) {
-            hero.style.backgroundImage = "url('engmobile.jpeg')";
+            hero.style.backgroundImage = "url('engmobile.webp')";
         } else {
-            hero.style.backgroundImage = "url('eng.jpg')";
+            hero.style.backgroundImage = "url('eng.webp')";
         }
 
     }
